@@ -1,0 +1,29 @@
+{
+  "name": "beer-ranker",
+  "version": "1.0.0",
+  "description": "beer ranking website",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreybrooks/beer-ranker.git"
+  },
+  "author": "corey, tody, jeff, karl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coreybrooks/beer-ranker/issues"
+  },
+  "homepage": "https://github.com/coreybrooks/beer-ranker#readme"
+}
