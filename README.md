@@ -1,3 +1,1 @@
 # beer-ranker
-
-test
