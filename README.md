@@ -6,4 +6,3 @@ Beer Battles is an interactive web application created by Corey Brooks, Jeff Men
 This project was built using an MVC structure.  The backend of this full-stack application incorporates Node.js and Express to route get and post request.  The beers up for battle and the user choice history are both stored in MySQL using a Sequelize ORM.
 
 The final product will be deployed on Heroku and use basic SEO strategies
-
