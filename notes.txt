@@ -1,0 +1,14 @@
+	
+The easiest way is to not store the count, relying on the COUNT aggregate function to reflect the value as it is in the database:
+
+   SELECT c.category_name,
+          COUNT(p.post_id) AS num_posts
+     FROM CATEGORY c
+LEFT JOIN POSTS p ON p.category_id = c.category_id
+You can create a view to house the query mentioned above, so you can query the view just like you would a table...
+
+But if you're set on storing the number, use:
+
+UPDATE CATEGORY
+   SET count = count + 1
+ WHERE category_id = ?

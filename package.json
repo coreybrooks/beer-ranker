@@ -25,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/coreybrooks/beer-ranker/issues"
   },
-  "homepage": "https://github.com/coreybrooks/beer-ranker#readme"
+  "homepage": "https://github.com/coreybrooks/beer-ranker#readme",
+  "keywords": [
+    "Beer",
+    "Ranker",
+    "App"
+  ]
 }
