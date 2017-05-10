@@ -29,8 +29,8 @@ else {
     console.log("the winner is: " + firstBeer[0].name);
     $("#contestingBeer").empty();
     $("#leadHeader").html(firstBeer[0].name + " is the winner!!");
-    $(".beerContainer1").attr("width", "100%");
-    $(".beerContainer2").attr("visibility", "none");
+    $(".beerContainer1").attr("class", "col-lg-12 text-center beerContainer1");
+    $(".beerContainer2").attr("class", "col-lg-12");
     }
 }
 

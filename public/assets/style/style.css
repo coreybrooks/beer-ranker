@@ -1,6 +1,6 @@
 body {
 	background-image: url("./../images/beer-cans.jpg");
-
+	padding: 10px;
 }
 
 .container {
@@ -9,6 +9,7 @@ body {
 	width: 100%;
 	max-width: 1000px;
 	padding: 25px;
+	margin-bottom: 20px;
 }
 
 .beerContainer1 {
