@@ -20,10 +20,11 @@ module.exports = function(app) {
   });
 
  // Find all style of beer and return them to the users
-  app.get("/api/beer/:gen_style", function(req, res) {
+  app.get("/api/beer/gen_style", function(req, res) {
+    console.log(req.body);
     db.Beer.findAll({
         where: {
-    gen_style: req.params.gen_style
+    gen_style: req.body.value
     }  
 }).then(function(txbeerdb) {
       res.json(txbeerdb);
