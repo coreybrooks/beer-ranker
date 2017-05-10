@@ -5,28 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
     <div class = "welcome">
         <h1>Welcome</h1>
-            <p>Join the Alcoholics of the world and enjoy the new and upcoming past time, of finding the best beer! :)</p>
-            <ol>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-                <li class="topTen"></li>
-            </ol>
+        <p>Join the beer connoisseurs of the world and enjoy the new and upcoming past time, of finding the best beer! :)</p>
     </div>
-    <div >
-        <div class="form-group">
+    <div class="container">
+      <div class="form-group">
           <select class="form-control" id="category">
             <option selected value="">All Categories</option>
+            <option value="lager">Lager</option>
+            <option value="paleAle">Pale Ale</option>
+            <option value="stout">Stouts</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
             <option value=""></option>
             <option value=""></option>
           </select>
@@ -34,20 +31,24 @@
     </div>
 <br>
 <br>
-  <div class="container">
-    <div>
-      <button id="choiceOne" class="col-md-6">
-        <h2 class="beerName"></h2>
-        <a class= "beerImage"></a>
+  <div class="container" id="beerButtons">
+    <div class="col-md-6" >
+      <button id="winningBeer" class="clickMe1"  type="button" onClick="myFunction(this)">
+        <div id="savedBeer">
+          <h2 class="beerName"></h2>
+          <br>
+          <img src="" alt="">
+        </div>
+
       </button>
-
-
-      <button id="choiceTwo" class="col-md-6">
-
-     <button id="choiceTwo" class="col-md-6">
-
-        <h2 class="beerName"></h2>
-        <a class= "beerImage"></a>
+    </div>
+    <div class="col-md-6">
+     <button id="contestingBeer" class="clickMe2" type="button" onClick="myFunction(this)">
+        <div id="newBeer">
+          <h2 class="beerName"></h2>
+          <br>
+          <img src="" alt="">
+        </div>
       </button>
     </div>
   </div>
