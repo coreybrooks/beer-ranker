@@ -11,8 +11,8 @@
 </head>
 <body>
     <div class = "welcome text-center">
-        <h1>Welcome</h1>
-        <p>Join the beer connoisseurs of the world and enjoy the new and upcoming past time, of finding the best beer! :)</p>
+        <h1>Texas Beer Wars</h1>
+        <h6>Join the beer connoisseurs of the world and vote for your favorite beer!</h6>
     </div>
     <div class="container">
     <!--
@@ -23,13 +23,14 @@
 
       <div class="form-group" id="formCategory">
       <h5>Choose your beer style</h5>
-         <form method="GET" action="/api/beer/gen_style">
+         <form method="post" action="/api/beers/gen_style">
+          <input type="hidden" type="text" name="gen_style">
           <select class="form-control" id="category">
             <option selected value="">All Categories</option>
             <option value="lager">Lager</option>
             <option value="paleAle">Pale Ale</option>
             <option value="stout">Stouts</option>
-            <option value=""></option>
+            <option value="AmericanIPA">American IPA</option>
             <option value=""></option>
             <option value=""></option>
             <option value=""></option>
@@ -44,15 +45,28 @@
 <br>
 <br>
   <div class="container">
+    <h2>Choose, but choose wisely</h2>
    <div class="row">
-    <div class="col-md-6 text-center">
-          <h2 id="winningBeer"></h2>
+    <div class="col-sm-6 text-center beerContainer1" id="winningBeer">
+          <h2 id="leadHeader">In the lead</h2>
           <br>
+          <p>name: <span id="winningBeerName"></span></p>
+          <p>abv: <span id="winningBeerAbv"></span></p>
+          <p>ibu: <span id="winningBeerIbu"></span></p>
+          <p>style: <span id="winningBeerStyle"></span></p>
+          <p>ounces: <span id="winningBeerOunces"></span></p>
+          <p>brewery: <span id="winningBeerBrewery"></span></p>
           <img src="" alt="">
     </div>
-    <div class="col-md-6 text-center">
-          <h2 id="contestingBeer"></h2>
+    <div class="col-sm-6 text-center beerContainer2" id="contestingBeer">
+          <h2>New Competitor</h2>
           <br>
+          <p>name: <span id="losingBeerName"></span></p>
+          <p>abv: <span id="losingBeerAbv"></span></p>
+          <p>ibu: <span id="losingBeerIbu"></span></p>
+          <p>style: <span id="losingBeerStyle"></span></p>
+          <p>ounces: <span id="losingBeerOunces"></span></p>
+          <p>brewery: <span id="losingBeerBrewery"></span></p>
           <img src="" alt="">
     </div>
    </div> 

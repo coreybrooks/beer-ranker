@@ -20,15 +20,16 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Routes =============================================================
 
-var routes = require("./routes");
+var routes = require("./controllers/beer-api-controller.js");
 
 app.use("/", routes);
 app.use("/update", routes);
 app.use("/create", routes);
 
+
 var PORT = process.env.PORT || 8080;
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync({force: false}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
