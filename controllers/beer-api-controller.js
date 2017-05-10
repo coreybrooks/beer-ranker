@@ -5,6 +5,13 @@ var router = express.Router();
 var db = require("../models");
 
   // Find all Beers and return them to the users
+  router.get("/", function(req, res) {
+    db.TxBeer.findAll({}).then(function(txbeerdb) {
+      res.json(txbeerdb);
+    });
+  });
+
+  // Find all Beers and return them to the users
   router.get("/api/beer", function(req, res) {
     db.TxBeer.findAll({}).then(function(txbeerdb) {
       res.json(txbeerdb);

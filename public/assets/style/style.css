@@ -2,14 +2,21 @@ body {
 	background-image: url("./../images/beer-cans.jpg");
 	padding: 10px;
 }
-
+.welcome {
+	background-color: black;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	opacity: 0.9;
+    border-radius: 10px;
+}
 .container {
 	background-color: #292929;
 	border-radius: 10px;
 	width: 100%;
 	max-width: 1000px;
-	padding: 25px;
-	margin-bottom: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .beerContainer1 {
@@ -25,7 +32,7 @@ body {
 
 #formCategory {
 	width: 100%;
-	max-width: 250px;
+	max-width: 300px;
 }
 
 #submitCategory {
