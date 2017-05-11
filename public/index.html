@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N4C2VNC');</script>
 <!-- End Google Tag Manager -->
-    <title>Beer Battles </title>
+    <title>Texas Beer Wars</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -37,8 +37,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h6>Join the beer connoisseurs of the world and vote for your favorite beer!</h6>
     </div>
     <div class="container">
-    <div class="row">
-      <div class="form-group col-sm-6" id="formCategory">
+    <div class="headBlock">
+      <div class="form-group" id="formCategory">
       <h5>Choose your beer style</h5>
          <form method="post" action="/api/beers/gen_style">
           <input type="hidden" type="text" name="gen_style">
@@ -58,31 +58,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button type="submit" class="btn btn-success button" id="submitCategory">SUBMIT</button>
           </form>
       </div>
-      <div class="col-sm-6 rankings">
+      <div class="rankings">
         <h4 style="text-decoration : underline">Current Rankings</h4>
-        <h5>#1: <span id="1Rank"></span></h5>
-        <h5>#2: <span id="2Rank"></span></h5>
-        <h5>#3: <span id="3Rank"></span></h5>
-        <h5>#4: <span id="4Rank"></span></h5>
-        <h5>#5: <span id="5Rank"></span></h5>
+        <h5>1) <span id="1Rank"></span></h5>
+        <h5>2) <span id="2Rank"></span></h5>
+        <h5>3) <span id="3Rank"></span></h5>
+        <h5>4) <span id="4Rank"></span></h5>
+        <h5>5) <span id="5Rank"></span></h5>
       </div>      
   </div>
   </div>
 <br>
-  <div class="container beerContainers">
-    <h2>Choose, but choose wisely</h2>
+  <div class="container beerContainers" style="display:none">
+    <h2>Choose, but choose weissly</h2>
+    <h5>click on your favorite!</h5>
    <div class="row">
     <div class="col-sm-6 beerContainer1" id="winningBeer">
           <h2 id="leadHeader">Current Winner</h2>
           <br>
           <div class="row">
             <div class="col-sm-6">
-              <p>name: <span id="winningBeerName"></span></p>
-              <p>abv: <span id="winningBeerAbv"></span></p>
-              <p>ibu: <span id="winningBeerIbu"></span></p>
-              <p>style: <span id="winningBeerStyle"></span></p>
-              <p>ounces: <span id="winningBeerOunces"></span></p>
-              <p>brewery: <span id="winningBeerBrewery"></span></p>
+              <p>Name: <span id="winningBeerName"></span></p>
+              <p>Style: <span id="winningBeerStyle"></span></p>
+              <p>ABV: <span id="winningBeerAbv"></span></p>
+              <p>IBU: <span id="winningBeerIbu"></span></p>
+              <p>Ounces: <span id="winningBeerOunces"></span></p>
+              <p>Brewery: <span id="winningBeerBrewery"></span></p>
+              <p>City: <span id="winningBeerCity"></span></p>
+              <p>State: <span id="winningBeerState"></span></p>
             </div>
             <div class="col-sm-6">  
             <div id="image1"></div>
@@ -94,12 +97,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <br>
           <div class="row">
             <div class="col-sm-6">
-              <p>name: <span id="losingBeerName"></span></p>
-              <p>abv: <span id="losingBeerAbv"></span></p>
-              <p>ibu: <span id="losingBeerIbu"></span></p>
-              <p>style: <span id="losingBeerStyle"></span></p>
-              <p>ounces: <span id="losingBeerOunces"></span></p>
-              <p>brewery: <span id="losingBeerBrewery"></span></p>
+              <p>Name: <span id="losingBeerName"></span></p>
+              <p>Style: <span id="losingBeerStyle"></span></p>
+              <p>ABV: <span id="losingBeerAbv"></span></p>
+              <p>IBU: <span id="losingBeerIbu"></span></p>
+              <p>Ounces: <span id="losingBeerOunces"></span></p>
+              <p>Brewery: <span id="losingBeerBrewery"></span></p>
+              <p>City: <span id="losingBeerCity"></span></p>
+              <p>State: <span id="losingBeerState"></span></p>
             </div>
             <div class="col-sm-6"> 
               <div id="image2"></div>

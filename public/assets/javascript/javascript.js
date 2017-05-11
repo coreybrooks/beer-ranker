@@ -38,7 +38,9 @@ if (beers.length>1) {
     $("#winningBeerIbu").html(firstBeer[0].ibu);
     $("#winningBeerStyle").html(firstBeer[0].style);
     $("#winningBeerOunces").html(firstBeer[0].ounces);
-    $("#winningBeerBrewery").html(firstBeer[0].brewery_id);
+    $("#winningBeerBrewery").html(firstBeer[0].brewery_name);
+    $("#winningBeerCity").html(firstBeer[0].city);
+    $("#winningBeerState").html(firstBeer[0].state);
     $("#image1").html(photo1);
 
     $("#losingBeerName").html(secondBeer[0].name);
@@ -47,6 +49,8 @@ if (beers.length>1) {
     $("#losingBeerStyle").html(secondBeer[0].style);
     $("#losingBeerOunces").html(secondBeer[0].ounces);
     $("#losingBeerBrewery").html(secondBeer[0].brewery_id); 
+    $("#losingBeerCity").html(secondBeer[0].city);
+    $("#losingBeerState").html(secondBeer[0].state);
     $("#image2").html(photo2);  
 
 }
@@ -57,6 +61,18 @@ else {
     $("#leadHeader").html(firstBeer[0].name + " is the winner!!");
     $(".beerContainer1").attr("class", "col-lg-12 text-center beerContainer1");
     $(".beerContainer2").attr("class", "col-lg-12");
+
+    var photo1 = "<img class='photos' src='" + firstBeer[0].image + "'/>";
+    $("#winningBeerName").html(firstBeer[0].name);
+    $("#winningBeerAbv").html(firstBeer[0].abv);
+    $("#winningBeerIbu").html(firstBeer[0].ibu);
+    $("#winningBeerStyle").html(firstBeer[0].style);
+    $("#winningBeerOunces").html(firstBeer[0].ounces);
+    $("#winningBeerBrewery").html(firstBeer[0].brewery_name);
+    $("#winningBeerCity").html(firstBeer[0].city);
+    $("#winningBeerState").html(firstBeer[0].state);
+    $("#image1").html(photo1);
+
      
     updateWinner(firstBeer[0]);
   }
@@ -78,6 +94,7 @@ $(document).on("click", "#contestingBeer", function() {
 
 $("#submitCategory").on("click", function(event) {
     event.preventDefault();
+    $(".beerContainers").attr("style", "display:normal");
     var value = $("#category").val().toLowerCase();
     console.log("category click is working");
     console.log(value);
@@ -91,7 +108,9 @@ $("#submitCategory").on("click", function(event) {
                 ibu: data[i].ibu,
                 style: data[i].style,
                 ounces: data[i].ounces,
-                brewery_id: data[i].brewery_id,
+                brewery_name: data[i].brewery_name,
+                city: data[i].city,
+                state: data[i].state,
                 image: data[i].image,
                 rank: data[i].rank
             }]
