@@ -3,25 +3,51 @@ console.log("hello");
 var beersTest = ["one", "two", "three", "four", "five"];
 var beers = [];
 
+function getAllBeers() {
+    $.get("/api/all", function(data) {
+        console.log("top beers: " + data[0].name + "," + data[1].name + "," + data[2].name);
+        $("#1Rank").html(data[0].name);
+        $("#2Rank").html(data[1].name);
+        $("#3Rank").html(data[2].name);
+        $("#4Rank").html(data[3].name);
+        $("#5Rank").html(data[4].name);
+    });
+}
+
+function updateWinner(post) {
+        $.ajax({
+        method: "PUT",
+        url: "/api/update",
+        data: post
+    }).done(function() {
+        console.log("ajax update request sent");
+    });
+}
+
 function selectBeers() {
     console.log("selectBeers is working");
 
 if (beers.length>1) {
     var firstBeer = beers[0];
     var secondBeer = beers[1];
+    var photo1 = "<img class='photos' src='" + firstBeer[0].image + "'/>";
+    var photo2 = "<img class='photos' src='" + secondBeer[0].image + "'/>";
+
     $("#winningBeerName").html(firstBeer[0].name);
     $("#winningBeerAbv").html(firstBeer[0].abv);
     $("#winningBeerIbu").html(firstBeer[0].ibu);
     $("#winningBeerStyle").html(firstBeer[0].style);
     $("#winningBeerOunces").html(firstBeer[0].ounces);
     $("#winningBeerBrewery").html(firstBeer[0].brewery_id);
+    $("#image1").html(photo1);
 
     $("#losingBeerName").html(secondBeer[0].name);
     $("#losingBeerAbv").html(secondBeer[0].abv);
     $("#losingBeerIbu").html(secondBeer[0].ibu);
     $("#losingBeerStyle").html(secondBeer[0].style);
     $("#losingBeerOunces").html(secondBeer[0].ounces);
-    $("#losingBeerBrewery").html(secondBeer[0].brewery_id);   
+    $("#losingBeerBrewery").html(secondBeer[0].brewery_id); 
+    $("#image2").html(photo2);  
 
 }
 else { 
@@ -31,7 +57,9 @@ else {
     $("#leadHeader").html(firstBeer[0].name + " is the winner!!");
     $(".beerContainer1").attr("class", "col-lg-12 text-center beerContainer1");
     $(".beerContainer2").attr("class", "col-lg-12");
-    }
+     
+    updateWinner(firstBeer[0]);
+  }
 }
 
 $(document).on("click", "#winningBeer", function() {
@@ -50,7 +78,7 @@ $(document).on("click", "#contestingBeer", function() {
 
 $("#submitCategory").on("click", function(event) {
     event.preventDefault();
-    var value = $("#category").val();
+    var value = $("#category").val().toLowerCase();
     console.log("category click is working");
     console.log(value);
     $.get("api/beers/" + value, function(data) {
@@ -64,7 +92,8 @@ $("#submitCategory").on("click", function(event) {
                 style: data[i].style,
                 ounces: data[i].ounces,
                 brewery_id: data[i].brewery_id,
-                image: data[i].image
+                image: data[i].image,
+                rank: data[i].rank
             }]
             beers.push(beerBuild);
         }
@@ -78,5 +107,7 @@ $("#submitCategory").on("click", function(event) {
         selectBeers();
     });
 });
+
+getAllBeers();
 
 

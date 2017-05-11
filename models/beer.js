@@ -13,6 +13,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
+    gen_style: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     ounces: {
       type: DataTypes.STRING,
       allowNull: true
@@ -23,6 +27,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     image: {
       type: DataTypes.STRING,
+      allowNull: true
+    },
+    rank: {
+      type: DataTypes.INTEGER,
       allowNull: true
     }
     }, {
