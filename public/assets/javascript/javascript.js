@@ -127,6 +127,11 @@ $("#submitCategory").on("click", function(event) {
     });
 });
 
+$("#reset").on("click", function() {
+    console.log("reset click is working");
+    window.location.href = "/";
+});
+
 getAllBeers();
 
 

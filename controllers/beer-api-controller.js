@@ -2,6 +2,7 @@
 var express = require("express");
 var router = express.Router();
 var sequelize = require("sequelize");
+var path = require("path");
 
 var db = require("../models");
 

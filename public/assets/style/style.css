@@ -10,6 +10,17 @@ body {
 	opacity: 0.9;
     border-radius: 10px;
 }
+
+#reset {
+	float: right;
+	width: 100%;
+    margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #98A8C9;
+	color: white;
+	font-size: 20px;
+	letter-spacing: 3px;
+}
 .container {
 	background-color: #292929;
 	border-radius: 10px;
@@ -21,7 +32,6 @@ body {
 
 .beerContainers {
 	clear: both;
-	height: 500px;
 	padding-bottom: 10px;
 	font-size: 14px;
 	line-height: 21px;
@@ -48,6 +58,8 @@ body {
 
 #submitCategory {
 	width: 100%;
+    font-size: 20px;
+	letter-spacing: 3px;
 }
 
 .photos {
