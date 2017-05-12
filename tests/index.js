@@ -1,7 +1,7 @@
 var chai = require('chai');
 var chaiHttp = require('chai-http');
 var should = chai.should();
-var server = 'http://localhost:3000';
+var server = 'http://localhost:8080';
 
 chai.use(chaiHttp);
 
@@ -15,7 +15,7 @@ describe('/', function() {
       })
   });
 });
-describe('/all', function() {
+describe('/api/all', function() {
   it('returns all beers to help determine winning ranks', function(done) {
     chai.request(server)
       .get('/all')
@@ -25,7 +25,7 @@ describe('/all', function() {
       });
   });
 });
-describe('/beers/:gen_style', function() {
+describe('api/beers/:gen_style', function() {
   it('returns an array of beers within the category', function(done) {
     chai.request(server)
       .get('/beers/:gen_style')
