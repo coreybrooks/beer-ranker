@@ -95,6 +95,7 @@ $(document).on("click", "#contestingBeer", function() {
 $("#submitCategory").on("click", function(event) {
     event.preventDefault();
     $(".beerContainers").attr("style", "display:normal");
+    $(".headContainer").attr("style", "display:none");
     var value = $("#category").val().toLowerCase();
     console.log("category click is working");
     console.log(value);

@@ -19,13 +19,14 @@ var db = require("../models");
   router.get("/api/beers/:gen_style", function(req, res) {
     console.log("/api/beers/gen_style is working");
     db.TxBeer.findAll({
-        where: {
-        gen_style: req.params.gen_style
-    }
-    }).then(function(txbeerdb) {
-      res.json (txbeerdb);      
+              where: {
+                 gen_style: req.params.gen_style,
+              },
+             order: [[sequelize.col("rank"), 'DESC']]
+     }).then(function(txbeerdb) {
+          res.json (txbeerdb);      
+        });
     });
-  });
 
 //update the win count for the winning beer
     router.put("/api/update", function(req, res) {
