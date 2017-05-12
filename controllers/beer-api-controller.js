@@ -23,7 +23,7 @@ var db = require("../models");
         gen_style: req.params.gen_style
     }
     }).then(function(txbeerdb) {
-      res.json (304, txbeerdb);      
+      res.json (txbeerdb);      
     });
   });
 

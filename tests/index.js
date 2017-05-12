@@ -30,7 +30,7 @@ describe('/api/beers/:gen_style', function() {
     chai.request(server)
       .get('/api/beers/:gen_style')
       .end(function(err, res) {
-        res.should.have.status(304);
+        res.should.have.status(200);
         done();
       });
   });
