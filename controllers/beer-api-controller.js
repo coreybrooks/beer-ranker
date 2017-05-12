@@ -21,9 +21,9 @@ var db = require("../models");
     db.TxBeer.findAll({
         where: {
         gen_style: req.params.gen_style
-    }  
+    }
     }).then(function(txbeerdb) {
-      res.json(txbeerdb);      
+      res.json (304, txbeerdb);      
     });
   });
 
@@ -40,9 +40,8 @@ var db = require("../models");
         where: {
           name: req.body.name
         }
-      }).then(function(dbPost) {
-        res.json(dbPost);
-      }); 
+      });
+      return res.json(204, {}); 
   });
 
 
